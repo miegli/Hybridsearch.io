@@ -1,3 +1,6 @@
+include: *.ts2
+include: Navigation/*.ts2
+
 /**
  * Root Fusion template for the hybridsearch.io site
  */
@@ -18,7 +21,7 @@ page = Neos.Neos:Page {
 		templatePath = 'resource://Hybridsearch.io/Private/Templates/Page/Default.html'
 		sectionName = 'body'
 		parts {
-			menu = Neos.Neos:Menu
+			menu = Hybridsearch.io:Menu
 		}
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.

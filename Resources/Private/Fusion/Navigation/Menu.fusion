@@ -1,0 +1,32 @@
+prototype(Hybridsearch.io:Menu) < prototype(Neos.Neos:Menu) {
+
+    templatePath = 'resource://Hybridsearch.io/Private/Templates/FusionObjects/Menu.html'
+
+    attributes.class = "nav navbar-nav"
+
+
+
+    1.active.attributes = Neos.Fusion:Attributes {
+        class = 'active'
+    }
+    1.current.attributes = Neos.Fusion:Attributes {
+        class = 'current'
+    }
+    1.normal.attributes = Neos.Fusion:Attributes {
+        class = 'dropdown'
+    }
+
+
+
+    2.active.attributes = Neos.Fusion:Attributes {
+        class = 'active'
+    }
+    2.current.attributes = Neos.Fusion:Attributes {
+        class = 'current'
+    }
+    2.normal.attributes = Neos.Fusion:Attributes {
+        class = ''
+    }
+
+
+}
