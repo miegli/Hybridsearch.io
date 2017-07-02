@@ -30,3 +30,39 @@ prototype(Hybridsearch.io:Menu) < prototype(Neos.Neos:Menu) {
 
 
 }
+
+prototype(Hybridsearch.io:MenuSideBar) < prototype(Neos.Neos:Menu) {
+
+    templatePath = 'resource://Hybridsearch.io/Private/Templates/FusionObjects/MenuSideBar.html'
+
+    attributes.class = "ms-slidebar-menu"
+    attributes.role="tablist"
+    attributes.aria-multiselectable="true"
+    attributes.id="slidebar-menu"
+
+
+    1.active.attributes = Neos.Fusion:Attributes {
+        class = 'active'
+    }
+    1.current.attributes = Neos.Fusion:Attributes {
+        class = 'current'
+    }
+    1.normal.attributes = Neos.Fusion:Attributes {
+        class = 'panel'
+        role="tab"
+        id=${"node-"+q(node).get(0).Identifier}
+    }
+
+
+    2.active.attributes = Neos.Fusion:Attributes {
+        class = 'active'
+    }
+    2.current.attributes = Neos.Fusion:Attributes {
+        class = 'current'
+    }
+    2.normal.attributes = Neos.Fusion:Attributes {
+        class = ''
+    }
+
+
+}

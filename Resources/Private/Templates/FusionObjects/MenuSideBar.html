@@ -13,20 +13,20 @@
                     <f:then>
                         <li {ts:render(path:
                         '{item.menuLevel}.{item.state}.attributes', context: {item: item}) -> f:format.raw()}>
-                        <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn animation-delay-5"
-                           data-toggle="dropdown" data-hover="dropdown" data-name="{item.label}">{item.label} <i
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu"
+                           href="#node-{item.node.Identifier}" aria-expanded="false" aria-controls="sc2">{item.label} <i
                                 class="zmdi zmdi-chevron-down"></i></a>
                         <f:if condition="{item.subItems}">
-                            <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                            <ul id="node-{item.node.Identifier}" class="panel-collapse collapse" role="tabpanel"
+                                aria-labelledby="node-{item.node.Identifier}">
                                 <f:render section="itemsList" arguments="{items: item.subItems}"/>
                             </ul>
                         </f:if>
                         </li>
                     </f:then>
                     <f:else>
-                        <li {ts:render(path:
-                        '{item.menuLevel}.{item.state}.attributes', context: {item: item}) -> f:format.raw()}>
-                        <a href="{neos:uri.node(node:item.node)}">{item.label}</a>
+                        <li>
+                           <a class="top" href="{neos:uri.node(node:item.node)}">{item.label}</a>
                         </li>
                     </f:else>
                 </f:if>

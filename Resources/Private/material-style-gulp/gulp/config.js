@@ -16,7 +16,7 @@ module.exports = {
     navbars : ['navbar-primary', 'navbar-dark', 'navbar-white'],
 
     folders : {
-        dist : '../../Public',
+        dist : '../../Public/dist',
         assets: 'assets',
         plugins: 'plugins'
     },

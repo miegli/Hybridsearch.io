@@ -22,6 +22,7 @@ page = Neos.Neos:Page {
 		sectionName = 'body'
 		parts {
 			menu = Hybridsearch.io:Menu
+			sidebarmenu = Hybridsearch.io:MenuSideBar
 		}
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
