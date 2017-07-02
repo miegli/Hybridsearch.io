@@ -1,0 +1,22 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
+    },
+    "suggest": {
+        "neos/seo": "*"
+    },
+    "name": "hybridsearch/io",
+    "autoload": {
+        "psr-4": {
+            "Hybridsearch\\io\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Hybridsearch.io"
+        }
+    }
+}
